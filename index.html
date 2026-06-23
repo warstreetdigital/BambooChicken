@@ -4,10 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bamboo Chicken | Harare's Crispy & Juicy Fast Food</title>
-    <!-- Tailwind CSS compiler hook -->
-    <link rel="stylesheet" href="/src/index.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" />
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+      /* Custom Striped Awning Styling */
+      .striped-awning {
+        background-image: repeating-linear-gradient(to right, #2563eb, #2563eb 24px, #ffffff 24px, #ffffff 48px);
+        position: relative;
+        height: 24px;
+        width: 100%;
+      }
+
+      /* Scalloped edge for the awning */
+      .scallop-border {
+        background-image: radial-gradient(circle at 12px 0px, #ffffff 12px, transparent 13px);
+        background-size: 24px 12px;
+        background-position: 12px 0px;
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        right: 0;
+        height: 12px;
+        z-index: 10;
+      }
+
+      /* Scallop edge for the awning blue pieces */
+      .scallop-border-blue {
+        background-image: radial-gradient(circle at 12px 0px, #2563eb 12px, transparent 13px);
+        background-size: 24px 12px;
+        background-position: 0px 0px;
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        right: 0;
+        height: 12px;
+        z-index: 11;
+      }
+
+      /* Food card hover transition */
+      .food-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .food-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 20px -8px rgba(251, 191, 36, 0.3);
+      }
+    </style>
   </head>
   <body class="bg-amber-50/10 text-zinc-800 font-sans antialiased selection:bg-amber-200 selection:text-amber-900">
     
@@ -45,7 +105,7 @@
           <!-- Logo & Brand -->
           <a href="/" class="flex items-center gap-3 group">
             <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400 bg-amber-50 shrink-0 transition-transform group-hover:scale-105">
-              <img src="/src/assets/images/bamboo_chicken_logo_1782251083522.jpg" alt="Bamboo Chicken Logo" class="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img src="assets/images/bamboo_chicken_logo_1782251083522.jpg" alt="Bamboo Chicken Logo" class="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
             <div>
               <h1 class="text-xl font-display font-bold tracking-tight text-zinc-950 flex items-center gap-1">
@@ -154,7 +214,7 @@
           <!-- Hero Image -->
           <div class="lg:col-span-6 relative flex justify-center">
             <div class="relative w-full max-w-lg aspect-video sm:aspect-square lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white ring-8 ring-amber-100/50">
-              <img src="/src/assets/images/bamboo_chicken_hero_1782251098416.jpg" alt="Mouth-watering Bamboo Fried Chicken & Chips" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+              <img src="assets/images/bamboo_chicken_hero_1782251098416.jpg" alt="Mouth-watering Bamboo Fried Chicken & Chips" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
               <!-- Banner Floating Tag -->
               <div class="absolute bottom-6 right-6 bg-blue-600 text-white p-4 rounded-2xl shadow-xl border border-blue-500/30 flex items-center gap-3 backdrop-blur-sm bg-blue-600/90">
                 <div class="p-2 bg-white/20 rounded-lg">
@@ -241,7 +301,7 @@
           <!-- Highlight Item 1 -->
           <div class="bg-white rounded-3xl overflow-hidden border border-amber-100 shadow-sm food-card flex flex-col justify-between">
             <div class="relative aspect-video bg-zinc-100 overflow-hidden">
-              <img src="/src/assets/images/bamboo_chicken_hero_1782251098416.jpg" alt="Chicken Wrap" class="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img src="assets/images/bamboo_chicken_hero_1782251098416.jpg" alt="Chicken Wrap" class="w-full h-full object-cover" referrerPolicy="no-referrer" />
               <div class="absolute top-4 left-4 bg-amber-500 text-zinc-950 font-bold text-xs px-2.5 py-1 rounded-full shadow-sm">
                 Top Rated
               </div>
@@ -269,7 +329,7 @@
           <!-- Highlight Item 2 -->
           <div class="bg-white rounded-3xl overflow-hidden border border-amber-100 shadow-sm food-card flex flex-col justify-between">
             <div class="relative aspect-video bg-zinc-100 overflow-hidden">
-              <img src="/src/assets/images/bamboo_chicken_menu_1782251124566.jpg" alt="Chicken Piecer & Chips" class="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img src="assets/images/bamboo_chicken_menu_1782251124566.jpg" alt="Chicken Piecer & Chips" class="w-full h-full object-cover" referrerPolicy="no-referrer" />
               <div class="absolute top-4 left-4 bg-red-600 text-white font-bold text-xs px-2.5 py-1 rounded-full shadow-sm">
                 Hot Deal
               </div>
@@ -425,7 +485,7 @@
           <div class="space-y-4">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-amber-400 bg-amber-50">
-                <img src="/src/assets/images/bamboo_chicken_logo_1782251083522.jpg" alt="Bamboo Chicken Logo" class="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="assets/images/bamboo_chicken_logo_1782251083522.jpg" alt="Bamboo Chicken Logo" class="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
               <h3 class="text-white font-display font-bold text-lg">
                 Bamboo <span class="text-amber-500">Chicken</span>

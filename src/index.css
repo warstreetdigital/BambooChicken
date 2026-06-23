@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+/* Custom Striped Awning Styling */
+.striped-awning {
+  background-image: repeating-linear-gradient(to right, #2563eb, #2563eb 24px, #ffffff 24px, #ffffff 48px);
+  position: relative;
+  height: 24px;
+  width: 100%;
+}
+
+/* Scalloped edge for the awning */
+.scallop-border {
+  background-image: radial-gradient(circle at 12px 0px, #ffffff 12px, transparent 13px);
+  background-size: 24px 12px;
+  background-position: 12px 0px;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  z-index: 10;
+}
+
+/* Scallop edge for the awning blue pieces */
+.scallop-border-blue {
+  background-image: radial-gradient(circle at 12px 0px, #2563eb 12px, transparent 13px);
+  background-size: 24px 12px;
+  background-position: 0px 0px;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  z-index: 11;
+}
+
+/* Food card hover transition */
+.food-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -8px rgba(251, 191, 36, 0.3);
+}
